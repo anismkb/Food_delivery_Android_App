@@ -1,0 +1,32 @@
+# Generated files
+/.dart_tool/
+/.packages
+/build/
+.idea/
+/.metadata
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# iOS
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/.symlinks
+ios/Pods
+ios/Runner.xcworkspace
+
+# Android
+android/.gradle
+android/captures
+android/.idea
+
+# Web
+web/.sass-cache
+
+# macOS
+macos/Pods
+
+# Windows
+windows/.flutter_plugins
+
+# Linux
+linux/flutter/ephemeral
