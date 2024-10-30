@@ -35,3 +35,4 @@ linux/flutter/ephemeral
 *.env
 
 lib/firebase_options.dart
+firebase.json
