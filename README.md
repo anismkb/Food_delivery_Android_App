@@ -3,14 +3,14 @@
 
 <table>
   <tr>
-    <td>First Screen Page</td>
-     <td>Creating groups</td>
-     <td>Profile page</td>
-    <td>Groups page</td>
-    <td>Group chat page</td>
-    <td>Group chat options</td>
-    <td>Accounts page</td>
-    <td>Search Friend page</td>
+    <td>Login Page</td>
+    <td>Reset Password</td>
+    <td>Home Page</td>
+    <td>Home Salad Page</td>
+    <td>Détails of Item</td>
+    <td>Food Cart</td>
+    <td>Wallet Page</td>
+    <td>Add Money</td>
   </tr>
   <tr>
     <td><img src="images/image_app/Login%20Page.png" width="250"> </td> 
@@ -21,12 +21,21 @@
     <td><img src="images/image_app/Food%20Cart.png" width="250"> </td>
     <td><img src="images/image_app/Wallet%20Page.png" width="250"> </td>
     <td><img src="images/image_app/Add%20Money.png" width="250"> </td>
-    <td><img src="images/image_app/User%20Profile.png" width="250"> </td>
-    <td><img src="images/image_app/Home%20Admin.png" width="250"> </td>
-    <td><img src="images/image_app/" width="250"> </td>
   </tr>
  </table>
 
+<table>
+    <tr> 
+        <td>Profile of User</td>
+        <td>Admin Home</td>
+        <td>Add Item</td>
+    </tr>
+    <tr>
+        <td><img src="images/image_app/User%20Profile.png" width="250"> </td>
+        <td><img src="images/image_app/Home%20Admin.png" width="250"> </td>
+        <td><img src="images/image_app/Add%20an%20Item.png" width="250"> </td>
+    </tr>
+</table>
 # Run the ecommerce app
 
 ## install the dependencies
