@@ -37,3 +37,4 @@ linux/flutter/ephemeral
 
 lib/firebase_options.dart
 firebase.json
+images/image_app

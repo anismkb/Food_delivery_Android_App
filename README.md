@@ -1,3 +1,32 @@
+# App Screenshots
+
+
+<table>
+  <tr>
+    <td>First Screen Page</td>
+     <td>Creating groups</td>
+     <td>Profile page</td>
+    <td>Groups page</td>
+    <td>Group chat page</td>
+    <td>Group chat options</td>
+    <td>Accounts page</td>
+    <td>Search Friend page</td>
+  </tr>
+  <tr>
+    <td><img src="images/image_app/Login%20Page.png" width="250"> </td> 
+    <td><img src="images/image_app/Reset%20Password.png" width="250"> </td>   
+    <td><img src="images/image_app/Home%20Page.png" width="250"> </td> 
+    <td><img src="images/image_app/Home%20Page_salad.png" width="250"> </td>
+    <td><img src="images/image_app/Detail%20of%20Item.png" width="250"> </td>
+    <td><img src="images/image_app/Food%20Cart.png" width="250"> </td>
+    <td><img src="images/image_app/Wallet%20Page.png" width="250"> </td>
+    <td><img src="images/image_app/Add%20Money.png" width="250"> </td>
+    <td><img src="images/image_app/User%20Profile.png" width="250"> </td>
+    <td><img src="images/image_app/Home%20Admin.png" width="250"> </td>
+    <td><img src="images/image_app/" width="250"> </td>
+  </tr>
+ </table>
+
 # Run the ecommerce app
 
 ## install the dependencies

@@ -192,7 +192,7 @@ class _WalletState extends State<Wallet> {
   }
 
   createPaymentIntent(String amount, String currency)async{
-    final stripePublishableKey = dotenv.env['STRIPE_PUBLISHABLE_KEY']!;
+    final stripeSecretKey = dotenv.env['STRIPE_SECRET_KEY']!;
     try{
       Map<String, dynamic> body={
         'amount': calculateAmount(amount),
@@ -204,7 +204,7 @@ class _WalletState extends State<Wallet> {
         headers: {
           //Stripe.publishableKey= dotenv.env['STRIPE_PUBLISHABLE_KEY']!;
           //'Authorization':'Bearer $secretKey',
-          'Authorization':'Bearer $stripePublishableKey',
+          'Authorization':'Bearer $stripeSecretKey',
           'Content-Type':'application/x-www-form-urlencoded'
         },
         body: body,
