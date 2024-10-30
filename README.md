@@ -1,16 +1,25 @@
-# ecommerce
+# Run the ecommerce app
 
-A new Flutter project.
+## install the dependencies
 
-## Getting Started
+Run this command 
+```bash
+flutter pub get
+```
 
-This project is a starting point for a Flutter application.
+## Set up your own Firebase
 
-A few resources to get you started if this is your first Flutter project:
+- Create your own project on firebase.
+- download google-services.json
+- Place it in the app folder
+- Setup Realtime database in firebase and enable the database by setting true to read & write in the rules tab of relatime database.
+- Setup Storage in firebase and enable it by setting true to read and write in the rules of storage.
+- Setup authentication in firebase and enable email/password authentication.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Set up env vars for the flutter app
+
+[Get your test Stripe API keys](https://stripe.com/docs/keys)
+create a file .env and set your Stripe publishable key and secret key in the
+STRIPE_PUBLISHABLE_KEY="YOU_PUBLISHABLE_KEY_HERE";
+STRIPE_SECRET_KEY="YOU_SECRET_KEY_HERE";

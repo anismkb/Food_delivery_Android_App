@@ -6,7 +6,7 @@ import 'package:ecommerce/widget/widget_support.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:ecommerce/widget/app_constant.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:http_parser/http_parser.dart';
 class Wallet extends StatefulWidget {
@@ -158,6 +158,7 @@ class _WalletState extends State<Wallet> {
   }
 
   displayPaymentSheet(String amount) async {
+
     try {
       // 3. display the payment sheet.
       await Stripe.instance.presentPaymentSheet().then((value) async{
@@ -191,6 +192,7 @@ class _WalletState extends State<Wallet> {
   }
 
   createPaymentIntent(String amount, String currency)async{
+    final stripePublishableKey = dotenv.env['STRIPE_PUBLISHABLE_KEY']!;
     try{
       Map<String, dynamic> body={
         'amount': calculateAmount(amount),
@@ -200,7 +202,9 @@ class _WalletState extends State<Wallet> {
       var response = await http.post(
         Uri.parse('https://api.stripe.com/v1/payment_intents'),
         headers: {
-          'Authorization':'Bearer $secretKey',
+          //Stripe.publishableKey= dotenv.env['STRIPE_PUBLISHABLE_KEY']!;
+          //'Authorization':'Bearer $secretKey',
+          'Authorization':'Bearer $stripePublishableKey',
           'Content-Type':'application/x-www-form-urlencoded'
         },
         body: body,
