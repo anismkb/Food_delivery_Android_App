@@ -18,6 +18,7 @@ ios/Runner.xcworkspace
 android/.gradle
 android/captures
 android/.idea
+android/app/google-services.json
 
 # Web
 web/.sass-cache
