@@ -36,6 +36,7 @@
         <td><img src="images/image_app/Add%20an%20Item.png" width="250"> </td>
     </tr>
 </table>
+
 # Run the ecommerce app
 
 ## install the dependencies
