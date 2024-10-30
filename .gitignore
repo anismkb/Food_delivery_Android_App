@@ -30,3 +30,8 @@ windows/.flutter_plugins
 
 # Linux
 linux/flutter/ephemeral
+
+#.env
+*.env
+
+lib/firebase_options.dart
