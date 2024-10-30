@@ -19,7 +19,7 @@ flutter pub get
 
 ## Set up env vars for the flutter app
 
-[Get your test Stripe API keys](https://stripe.com/docs/keys)
-create a file .env and set your Stripe publishable key and secret key in the
-STRIPE_PUBLISHABLE_KEY="YOU_PUBLISHABLE_KEY_HERE";
-STRIPE_SECRET_KEY="YOU_SECRET_KEY_HERE";
+- [Get your test Stripe API keys](https://stripe.com/docs/keys)
+- create a file .env and set your Stripe publishable key and secret key in the
+- STRIPE_PUBLISHABLE_KEY="YOU_PUBLISHABLE_KEY_HERE";
+- STRIPE_SECRET_KEY="YOU_SECRET_KEY_HERE";
