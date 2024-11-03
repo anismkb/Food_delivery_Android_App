@@ -4,6 +4,7 @@ import 'package:ecommerce/admin/admin_login.dart';
 import 'package:ecommerce/pages/bottomnav.dart';
 import 'package:ecommerce/pages/details.dart';
 import 'package:ecommerce/pages/home.dart';
+import 'package:ecommerce/pages/login.dart';
 import 'package:ecommerce/pages/onboard.dart';
 import 'package:ecommerce/pages/profile.dart';
 import 'package:ecommerce/pages/signUp.dart';

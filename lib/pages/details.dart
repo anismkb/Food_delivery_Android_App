@@ -16,13 +16,19 @@ class Details extends StatefulWidget {
 }
 
 class _DetailsState extends State<Details> {
-  int nbcommande = 1;
+  late int nbcommande=0;
   int total =0;
 
   late String? Id;
+  late String comd;
 
   getthesharedpref()async{
     Id=await SharedPreferenceHelper().getUserId();
+    String? quantity = await DatabaseMethods().getQuantity(widget.name, Id!);
+    comd = quantity ?? "0";
+    nbcommande=int.parse(comd);
+    var totale=await DatabaseMethods().getOrSetTotal(widget.name, Id!);
+    total= int.parse(totale);// Attribuez "0" si quantity est null
     setState(() {
 
     });
@@ -40,7 +46,6 @@ class _DetailsState extends State<Details> {
     // TODO: implement initState
     super.initState();
     onthload();
-    total=int.parse(widget.price);
   }
   @override
   Widget build(BuildContext context) {
@@ -52,7 +57,7 @@ class _DetailsState extends State<Details> {
           children: [
           GestureDetector(
             onTap: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) => Bottomnav()));
+              Navigator.pop(context);
             },
             child: Icon(Icons.arrow_back_ios_new_outlined, color: Colors.black,),
           ),
@@ -127,14 +132,23 @@ class _DetailsState extends State<Details> {
             Spacer(),
             GestureDetector(
               onTap: (){
+                // Vérifiez si Id est null avant d'exécuter l'ajout au panier
                 Map<String, dynamic> AddfoodToCart = {
                   "Name": widget.name,
                   "Quantity": nbcommande.toString(),
                   "Total": total.toString(),
                   "Image": widget.image,
                 };
-                DatabaseMethods().addFoodToCart(AddfoodToCart, Id!);
-                ScaffoldMessenger.of(context).showSnackBar((SnackBar(content:Text("Food Added to cart", style: TextStyle(fontSize: 20.0, fontFamily: "Poppins", ),))));
+                //DatabaseMethods().addFoodToCart(AddfoodToCart, Id!);
+                DatabaseMethods().AddOrUpdateFoodInCart(AddfoodToCart, Id!);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      "Food Added to cart",
+                      style: TextStyle(fontSize: 20.0, fontFamily: "Poppins"),
+                    ),
+                  ),
+                );
               },
               child: Container(
                 decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), color: Colors.black),

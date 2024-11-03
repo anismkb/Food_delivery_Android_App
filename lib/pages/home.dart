@@ -2,7 +2,7 @@ import 'package:ecommerce/service/database.dart';
 import 'package:ecommerce/widget/widget_support.dart';
 import 'package:flutter/material.dart';
 import 'details.dart';
-
+import 'order.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -146,11 +146,15 @@ class _HomeState extends State<Home> {
               children: [
                 Text("Wolcom clients,",
                   style: AppWidget.boldTextFeildStyle(),),
-                Container(
-                  padding: EdgeInsets.all(3),
-                  decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10)),
-                  child: Icon(Icons.shopping_cart, color: Colors.white,),
-                )
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Order()));
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(3),
+                    decoration: BoxDecoration(color: Colors.black, borderRadius: BorderRadius.circular(10)),
+                    child: Icon(Icons.shopping_cart, color: Colors.white,)),
+                ),
               ],
             ),
             SizedBox(height: 20,),
