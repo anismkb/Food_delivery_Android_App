@@ -37,7 +37,7 @@
     </tr>
 </table>
 
-# Run the ecommerce app
+# Run the delivery food app
 
 ## install the dependencies
 
